@@ -7,7 +7,7 @@ public class DataProject
     public static void main(String[] args) 
     {
         
-        DataSource electionResults = DataSource.connect("/us-election-2012-results-by-county - us-election-2012-results-by-county.csv");
+        DataSource electionResults = DataSource.connect("lib/us-election-2012-results-by-county - us-election-2012-results-by-county.csv");
         electionResults.load();
 
         ArrayList<Results> results = electionResults.fetchList("Results","FirstName","LastName","Party","CountyName","StateCode","Votes");
