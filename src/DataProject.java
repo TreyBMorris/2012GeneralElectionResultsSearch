@@ -16,7 +16,7 @@ public class DataProject
         
         
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a County name (CASE SENSITIVE): ");
+        System.out.println("Enter a County name (First Letter Needs to Be Capitalized): ");
         String county = sc.next();
         System.out.println("Election Results in " + county);
         for (Results el : results) 
