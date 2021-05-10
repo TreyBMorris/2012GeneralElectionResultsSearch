@@ -18,11 +18,18 @@ public class DataProject
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a County name (First Letter Needs to Be Capitalized): ");
         String county = sc.next();
+        System.out.println("Enter a State abbreviation(CAPITALIZED): ");
+        String state = sc.next();
         System.out.println("Election Results in " + county);
         for (Results el : results) 
         {
-            if (el.isLocatedInCounty(county)) {
-               System.out.println(el.getName() +" Representing the " + el.partyAbrev() + " party received " + el.getVoteCount() + " votes in " + el.countyName() +" County, in the state of " + el.stateName() + " in the 2012 election.");
+            if (el.isLocatedInCounty(county))
+            {
+                if (el.isLocatedInState(state))
+                {
+                    System.out.println(el.getName() +" Representing the " + el.partyAbrev() + " party received " + el.getVoteCount() + " votes in " + el.countyName() +" County, in the state of " + el.stateName() + " in the 2012 election.");
+                }
+
             }
             
         }

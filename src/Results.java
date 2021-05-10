@@ -42,6 +42,11 @@ class Results
     return this.countyName.equals(st);
     }
 
+    public boolean isLocatedInState(String st)
+    {
+        return this.stateCode.equals(st);
+    }
+
     public int getVoteCount()
     {
         return voteCount;
