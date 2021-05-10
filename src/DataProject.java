@@ -12,9 +12,7 @@ public class DataProject
 
         ArrayList<Results> results = electionResults.fetchList("Results","FirstName","LastName","Party","CountyName","StateCode","Votes");
        
-        
-        
-        
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a County name (First Letter Needs to Be Capitalized): ");
         String county = sc.next();
